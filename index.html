@@ -9,9 +9,17 @@
 <body>
     <h1>Autók</h1>
     <form action="#" method="get">
-        <label for="kedvenc_marka"></label>
-        <input type="text" id="kedvenc_marka" name="márka" value="Honda">
-        <input type="submit" value="küldés">
+        <fieldset>
+            <legend>Autó adatai</legend>
+            <label for="kedvenc_marka">Kedvenc márka:</label>
+            <input type="text" id="kedvenc_marka" name="márka" value="Honda"><br>
+            <label for="tipus">Típus</label>
+            <input type="text" id="tipus" name="típus" value="Civic"><br>
+            <label for="evjarat">Évjárat:</label>
+            <input type="range" name="evjarat" min="1804" max="2024" id="evjarat" oninput="this.form.evjarat_szam.value = this.value">
+            <input type="number" name="evjarat_szam" min="1804" max="2024" oninput="this.form.evjarat.value = this.value"><br>
+            <input type="submit" value="küldés">
+        </fieldset>
     </form>
 </body>
 </html>
